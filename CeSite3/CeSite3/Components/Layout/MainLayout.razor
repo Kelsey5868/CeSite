@@ -1,0 +1,40 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor.Services
+
+<MudThemingProvider />
+
+<div >
+
+    <div class="mud-elevation-1" style="position: sticky; top: 0; right: 0; left: 0;">
+
+        <div class="py-6 px-10 d-flex justify-space-between flex-grow-1" style="background-color: rgba(73,73, 73, 1);">
+
+            <div class="d-none d-md-flex flex-grow-1 pa-4">
+                    <MudText Align="Align.Left" Style="color: rgb(130, 196, 255);" Typo="Typo.h3">Logo Full</MudText>
+            </div>
+        </div>
+
+        <MudDivider DividerType="DividerType.Middle" Class="my-0" />
+        <div class="d-flex justify-space-around flex-grow-1 gap-1 px-5 py-2 ud-elevation-2" style="background-color: rgba(208,208, 208, 0.7); backdrop-filter: blur(8px) drop-shadow(0px 4px 10px rgba(0,0,0,0.2)); box-shadow: 0 0 10px 0 rgba(0,0,0,0.8); font-family: Creattion">
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-1.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text" Href="#">Portfolio</MudButton>
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-2.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text" Href="illustration">Illustration</MudButton>
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-7.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Graphic Design</MudButton>
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-4.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Painting</MudButton>
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-3.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Resume</MudButton>
+            <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-5.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Me</MudButton>
+        </div>
+    </div>
+
+    <div class="pa-4">
+        @Body
+    </div>
+</div>
+
+@code {
+    private bool _drawerOpen = true;
+
+    private void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

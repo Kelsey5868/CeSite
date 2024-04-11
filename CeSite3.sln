@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeSite3", "CeSite3\CeSite3\CeSite3.csproj", "{3983A52A-BC92-40F2-B94F-143F68A8FC82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeSite3.Client", "CeSite3\CeSite3.Client\CeSite3.Client.csproj", "{1A568222-E3A8-455A-BFA7-5732B86AD284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3983A52A-BC92-40F2-B94F-143F68A8FC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3983A52A-BC92-40F2-B94F-143F68A8FC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3983A52A-BC92-40F2-B94F-143F68A8FC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3983A52A-BC92-40F2-B94F-143F68A8FC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A568222-E3A8-455A-BFA7-5732B86AD284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A568222-E3A8-455A-BFA7-5732B86AD284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A568222-E3A8-455A-BFA7-5732B86AD284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A568222-E3A8-455A-BFA7-5732B86AD284}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6887FC9-B921-4A3C-BE45-0E261B9BB12D}
+	EndGlobalSection
+EndGlobal

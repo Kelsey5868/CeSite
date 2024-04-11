@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.8 175.97">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #a3d9f5;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-width: 3px;
+      }
+
+      .cls-3, .cls-2 {
+        stroke: #a3d9f5;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <polyline class="cls-3" points="46.98 59.97 47.5 129.41 112 129.41"/>
+  </g>
+  <g id="Layer_4" data-name="Layer 4">
+    <path class="cls-1" d="M64.53,88.46s-19.82-5.98-19-32,18.6-29.55,18.6-29.55l1.46,2.19s-18.06,6.36-17.06,29.36,18,28,18,28l-2,2Z"/>
+  </g>
+  <g id="Layer_5" data-name="Layer 5">
+    <path class="cls-1" d="M86.53,42.46s0-11-9-13c0,0-5.91-1.25-10.45,1.88l-2.94-4.43s5.27-2.28,12.83-.37,9.51,5.97,9.51,5.97l.05,9.95Z"/>
+  </g>
+  <g id="Layer_6" data-name="Layer 6">
+    <path class="cls-1" d="M65.59,29.1s-5.75,3.55-9.06,16.36-1.45,27.69,3.82,34.81c2.79,3.77,6.18,6.19,6.18,6.19l1.72-1.93s-8.31-3.98-9.19-17.71c-.77-12.02-.95-27.85,8.01-35.49l-1.49-2.24Z"/>
+  </g>
+  <g id="Layer_7" data-name="Layer 7">
+    <path class="cls-1" d="M87.53,71.46l2.55,1.89s-6.36,20.48-25.55,15.11l3.72-3.93s12.36,5.9,19.28-13.07Z"/>
+  </g>
+  <g id="Layer_8" data-name="Layer 8">
+    <rect class="cls-2" x="86.48" y="27.35" width="3.6" height="22.95"/>
+  </g>
+  <g id="Layer_40" data-name="Layer 40">
+    <polyline class="cls-3" points="90.55 28.35 126.66 28.35 126.92 72.91"/>
+  </g>
+  <g id="Layer_41" data-name="Layer 41">
+    <polygon class="cls-1" points="93.15 74.15 93 128.91 97 128.91 96.75 74.15 93.15 74.15"/>
+  </g>
+  <g id="Layer_42" data-name="Layer 42">
+    <polygon class="cls-1" points="87.53 71.46 106 71.38 106 74.53 87.49 74.53 87.53 71.46"/>
+  </g>
+  <g id="Layer_43" data-name="Layer 43">
+    <path class="cls-1" d="M105.75,97.39c.25-.48,1.1-14.9,9.55-20.38,6.18-4.01,10.14-4.1,10.14-4.1l.07-3.41s-8.8.3-15.46,7.04c0,0-2.45,2.15-4.42,6.66-1.27,2.9-.64,3.71-.64,3.71l.75,10.48Z"/>
+  </g>
+  <g id="Layer_44" data-name="Layer 44">
+    <polygon class="cls-1" points="102 71.58 102.15 128.83 105.75 128.83 106 71.58 102 71.58"/>
+  </g>
+</svg>

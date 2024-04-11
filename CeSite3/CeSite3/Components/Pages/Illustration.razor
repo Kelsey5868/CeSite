@@ -1,0 +1,36 @@
+﻿@page "/illustration"
+
+<MudSlider @bind-Value="spacing" Min="0" Max="10" Color="Color.Info" Class="mb-6">Spacing: @spacing.ToString()</MudSlider>
+
+<MudGrid Spacing="@spacing" Justify="Justify.Center">
+
+    @if (_imageSources.Count > 0)
+    {
+        @foreach(var imageSource in _imageSources)
+        {
+            <MudItem>
+                <MudImage Src="@imageSource" Alt="alt-text" Elevation="25" Class="rounded-lg" />
+            </MudItem>
+        }
+    }
+
+</MudGrid>
+
+@code {
+    private List<string> _imageSources = [];
+
+    private string _illustrationDirectory = "wwwroot/illustration/";
+
+    public int spacing { get; set; } = 2;
+
+    // Find all 'Illustration' images
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Run(() => { 
+            _imageSources = Directory.GetFiles(_illustrationDirectory).ToList();
+        });
+
+        int asdf = 3;
+    }
+
+}
