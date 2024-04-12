@@ -1,15 +1,81 @@
-﻿
-<MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
-    <MudTabPanel Text="Tab One">
-        <CeSite3.Client.Pages.Counter/>
-    </MudTabPanel>
-    <MudTabPanel Text="Tab Two">
-        <MudText>Content Two</MudText>
-    </MudTabPanel>
-    <MudTabPanel Text="Tab Three">
-        <MudText>Content Three</MudText>
-    </MudTabPanel>
-    <MudTabPanel Text="Tab Disabled" Disabled="true">
-        <MudText>Content Disabled</MudText>
-    </MudTabPanel>
-</MudTabs>
+﻿@rendermode InteractiveServer
+
+<div style="position: sticky; top: 0; right: 0; left: 0;">
+
+    <div class="px-5 d-flex justify-space-between flex-grow-1 mud-elevation-1" style="background-color: rgba(73,73, 73, 1); box-shadow: 0 0 10px 0 rgba(0,0,0,0.3)">
+
+        <div class="d-xl-none d-md-flex flex-grow-1 pa-2 py-4 mb-3">
+            <MudImage Src="images/icon/cecilia_rora_text.svg" Height="100" ObjectFit="ObjectFit.Cover" Style="user-select: none;" />
+        </div>
+
+        <div class="d-none d-xl-flex flex-grow-1 pa-4 py-6 mb-5">
+            <MudImage Src="images/icon/cecilia_rora_text.svg" Height="100" ObjectFit="ObjectFit.Cover" Style="user-select: none;" />
+        </div>
+
+        <div class="d-md-none flex-grow-1 px-3 py-1">
+
+            <div class="d-flex flex-grow-1 gap-1 align-content-center justify-content-start">
+                <MudToggleIconButton Class="flex-none d-flex  my-auto" Size="Size.Large" Icon="@Icons.Material.Rounded.Menu" ToggledIcon="@Icons.Material.Rounded.Close" ToggledSize="Size.Large" @onclick="@ToggleDrawer" @bind-Toggled="@_drawerOpen" style="background-color: rgba(208,208, 208, 0.0); width: 68px; height: 68px;" />
+                <MudImage Class="flex-none d-flex my-auto" Src="images/icon/lettermark_color.svg" Height="100" Style="user-select: none;" />
+            </div>
+
+            <MudDrawer @bind-Open="_drawerOpen" Elevation="2" Style="top: -12; border-radius: 0px 34px 34px 0px;height: 70vh; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
+
+                <MudNavMenu Bordered="true" Style="height: 100%">
+
+                    <MudNavLink Href="#">Portfolio</MudNavLink>
+                    <MudNavLink Href="illustration">Illustration</MudNavLink>
+                    <MudNavLink Href="#">Graphic Design</MudNavLink>
+                    <MudNavLink Href="#">Painting</MudNavLink>
+                    <MudNavLink Href="#">Resume</MudNavLink>
+                    <MudNavLink Href="#">Me</MudNavLink>
+
+                </MudNavMenu>
+            </MudDrawer>
+
+        </div>
+
+    </div>
+
+    <div class="nav-bar d-none d-md-flex gap-1 px-6 py-2 mx-12 mud-elevation-2" >
+        <NavBar />
+    </div>
+
+
+
+    <!--
+    <div class="d-md-none d-flex justify-space-around flex-grow-1 gap-1 px-6 py-2 mx-12 mud-elevation-2" style="position: relative; top: -16px; border-radius: 34px; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
+        <MudIconButton Icon="@Icons.Material.Rounded.Menu" OnClick="@ToggleDrawer"/>
+    </div>
+    -->
+
+</div>
+
+<!--
+    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-2.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text" Href="illustration">Illustration</MudButton>
+    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-7.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Graphic Design</MudButton>
+    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-4.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Painting</MudButton>
+    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-3.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Resume</MudButton>
+    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-5.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Me</MudButton>
+-->
+@code {
+    bool _drawerOpen = false;
+
+    void ToggleDrawer()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
+
+<style>
+    .nav-bar {
+        flex-grow: 1;
+        justify-content: space-around;
+        position: relative;
+        top: -16px;
+        border-radius: 34px;
+        background-color: rgba(208,208, 208, 0.6);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);
+    }
+</style>

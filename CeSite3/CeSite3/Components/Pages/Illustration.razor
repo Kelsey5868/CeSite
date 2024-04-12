@@ -19,15 +19,23 @@
 @code {
     private List<string> _imageSources = [];
 
-    private string _illustrationDirectory = "wwwroot/illustration/";
+    private string _illustrationDirectory = "./images/illustration/";
+    private string _illustrationDirectoryServer = "./wwwroot/images/illustration/";
 
     public int spacing { get; set; } = 2;
 
     // Find all 'Illustration' images
     protected override async Task OnInitializedAsync()
     {
+
+        // var asfd2 = Directory.GetFiles("./wwwroot/images/illustration/");
+
         await Task.Run(() => { 
-            _imageSources = Directory.GetFiles(_illustrationDirectory).ToList();
+            var files = Directory.GetFiles(_illustrationDirectoryServer).ToList();
+            foreach(var imgSource in files)
+            {
+                _imageSources.Add(Path.GetRelativePath("./wwwroot/", imgSource));
+            }
         });
 
         int asdf = 3;
