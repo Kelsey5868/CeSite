@@ -1,5 +1,5 @@
-﻿@page "/illustration"
-<PageTitle>CS - Illustration</PageTitle>
+﻿@page "/graphicdesign"
+<PageTitle>Ce - Graphic Design</PageTitle>
 
 <MudGrid Class="pa-16" Spacing="4" Justify="Justify.Center">
 
@@ -7,7 +7,7 @@
     {
         @foreach(var imageSource in _imageSources)
         {
-            <MudItem xs="12" md="4">
+            <MudItem xs="12" md="4" lg="3">
             <div style="position:relative;height:100%;width:100%;">
                     <MudImage  ObjectFit="ObjectFit.Cover" Style="height:100%;width:100%;" Src="@imageSource" Alt="Image" Elevation="3" />
             </div>
@@ -20,16 +20,12 @@
 @code {
     private List<string> _imageSources = [];
 
-    private string _illustrationDirectory = "./images/illustration/";
-    private string _illustrationDirectoryServer = "./wwwroot/images/illustration/";
-
-    public int spacing { get; set; } = 2;
+    private string _illustrationDirectory = "./images/graphic design/";
+    private string _illustrationDirectoryServer = "./wwwroot/images/graphic design/";
 
     // Find all 'Illustration' images
     protected override async Task OnInitializedAsync()
     {
-
-        // var asfd2 = Directory.GetFiles("./wwwroot/images/illustration/");
 
         await Task.Run(() => { 
             var files = Directory.GetFiles(_illustrationDirectoryServer).ToList();

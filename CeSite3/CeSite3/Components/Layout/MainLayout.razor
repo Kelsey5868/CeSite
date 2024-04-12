@@ -3,21 +3,14 @@
 
 <MudThemingProvider />
 
-<div style="overflow: hidden">
-    <NavMenu/>
+<div class="overflow-hidden">
+    <NavMenu />
 
-    <div class="pa-4">
+    <div class="overflow-hidden">
         @Body
     </div>
 
-    <Footer/>
+    <div class="mt-13 overflow-hidden">
+        <Footer/>
+    </div>
 </div>
-
-@code {
-    private bool _drawerOpen = true;
-
-    private void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
-}

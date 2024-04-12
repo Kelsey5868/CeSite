@@ -1,6 +1,6 @@
 ﻿@rendermode InteractiveServer
 
-<div style="position: sticky; top: 0; right: 0; left: 0; background-color: transparent">
+<div  style="position: relative; top: 0; right: 0; left: 0; background-color: transparent">
 
     <div class="px-5 d-flex justify-space-between flex-grow-1 mud-elevation-1" style="background-color: rgba(43,43, 43, 0.9); backdrop-filter: blur(40px); box-shadow: 0 4px 16px 0 rgba(0,0,0,0.5)">
 
@@ -19,9 +19,9 @@
                 <MudImage Class="flex-none d-flex my-auto" Src="images/icon/lettermark_color.svg" Height="100" Style="user-select: none;" />
             </div>
 
-            <MudDrawer @bind-Open="_drawerOpen" Elevation="2" Style="top: -20px; border-radius: 0px 34px 34px 0px;height: 70vh; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
+            <MudDrawer @bind-Open="_drawerOpen" Elevation="24" Style="position: fixed; left: 0; top: 20%; border-radius: 0px 34px 34px 0px;height: 70vh; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
 
-                <MudNavMenu Bordered="true" Style="height: 100%">
+                <MudNavMenu Bordered="true" Style="height: 100%; color: #0e2e3e; border-color: #0e2e3e">
 
                     <MudNavLink Href="#">Portfolio</MudNavLink>
                     <MudNavLink Href="illustration">Illustration</MudNavLink>
@@ -41,23 +41,8 @@
         <NavBar />
     </div>
 
-
-
-    <!--
-    <div class="d-md-none d-flex justify-space-around flex-grow-1 gap-1 px-6 py-2 mx-12 mud-elevation-2" style="position: relative; top: -16px; border-radius: 34px; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
-        <MudIconButton Icon="@Icons.Material.Rounded.Menu" OnClick="@ToggleDrawer"/>
-    </div>
-    -->
-
 </div>
 
-<!--
-    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-2.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text" Href="illustration">Illustration</MudButton>
-    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-7.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Graphic Design</MudButton>
-    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-4.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Painting</MudButton>
-    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-3.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Resume</MudButton>
-    <MudButton Class="flex-grow-1 nav-item" Style="color: rgb(73,73, 73); background-image: url('text-background-highlight-5.png'); background-size: contain;  background-repeat: no-repeat; background-position: center;" Size="Size.Large" Variant="Variant.Text">Me</MudButton>
--->
 @code {
     bool _drawerOpen = false;
 
@@ -65,6 +50,13 @@
     {
         _drawerOpen = !_drawerOpen;
     }
+
+    public void OnScroll(EventArgs e )
+    {
+        int asdf = 3;
+    }
+
+
 }
 
 <style>
@@ -73,9 +65,10 @@
         justify-content: space-around;
         position: relative;
         top: -16px;
-        border-radius: 34px;
-        background-color: rgba(208,208, 208, 0.6);
+        border-radius: 30px;
+        background-color: rgba(208,208, 208, 0.7);
         backdrop-filter: blur(8px);
-        box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,0.4);
     }
+
 </style>
