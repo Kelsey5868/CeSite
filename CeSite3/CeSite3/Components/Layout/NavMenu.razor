@@ -15,20 +15,19 @@
         <div class="d-md-none flex-grow-1 px-3 py-1">
 
             <div class="d-flex flex-grow-1 gap-1 align-content-center justify-content-start">
-                <MudToggleIconButton Class="flex-none d-flex  my-auto" Size="Size.Large" Icon="@Icons.Material.Rounded.Menu" ToggledIcon="@Icons.Material.Rounded.Close" ToggledSize="Size.Large" @onclick="@ToggleDrawer" @bind-Toggled="@_drawerOpen" style="background-color: rgba(208,208, 208, 0.0); width: 68px; height: 68px;" />
+                <MudIconButton Class="flex-none d-flex  my-auto" Size="Size.Large" Icon="@Icons.Material.Rounded.Menu" @onclick="@ToggleDrawer" style="background-color: rgba(208,208, 208, 0.0); width: 68px; height: 68px; color: #a3d9f5"  />
                 <MudImage Class="flex-none d-flex my-auto" Src="images/icon/lettermark_color.svg" Height="100" Style="user-select: none;" />
             </div>
 
-            <MudDrawer @bind-Open="_drawerOpen" Elevation="24" Style="position: fixed; left: 0; top: 20%; border-radius: 0px 34px 34px 0px;height: 70vh; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
-
+            <MudDrawer @bind-Open="_drawerOpen" Style="position: relative; top: 20%; border-radius: 0px 34px 34px 0px;height: 70vh; background-color: rgba(208,208, 208, 0.6); backdrop-filter: blur(8px) ; box-shadow: 0 3px 18px 0 rgba(0,0,0,0.8);">
                 <MudNavMenu Bordered="true" Style="height: 100%; color: #0e2e3e; border-color: #0e2e3e">
 
-                    <MudNavLink Href="#">Portfolio</MudNavLink>
-                    <MudNavLink Href="illustration">Illustration</MudNavLink>
-                    <MudNavLink Href="#">Graphic Design</MudNavLink>
-                    <MudNavLink Href="#">Painting</MudNavLink>
-                    <MudNavLink Href="#">Resume</MudNavLink>
-                    <MudNavLink Href="#">Me</MudNavLink>
+                    <MudNavLink Href="/">Portfolio</MudNavLink>
+                    <MudNavLink Href="/illustration">Illustration</MudNavLink>
+                    <MudNavLink Href="/graphicdesign">Graphic Design</MudNavLink>
+                    <MudNavLink Href="/painting">Painting</MudNavLink>
+                    <MudNavLink Href="/">Resume</MudNavLink>
+                    <MudNavLink Href="/">Me</MudNavLink>
 
                 </MudNavMenu>
             </MudDrawer>
